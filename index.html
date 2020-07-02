@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 150px;
+            background-color: ivory;
+        }
+
+        .navTitle {
+            width: 50%;
+            height: 150px;
+            background-color: ivory;
+
+        }
+
+        .navKey {
+            position: relative;
+            width: 10%;
+            height: 150px;
+            background-color: ivory;
+
+
+
+        }
+
+        .hoverShadow {
+            display: none;
+            position: relative;
+
+        }
+
+        .clickShadow {
+            display: none;
+            position: relative;
+
+        }
+
+        .hoverShadow1 {
+
+            background-color: black;
+            position: absolute;
+            top: 0;
+            height: 10px;
+            width: 100%;
+            opacity: .5;
+        }
+
+        .hoverShadow2 {
+
+            background-color: black;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            height: 140px;
+            width: 10px;
+            opacity: .5;
+        }
+
+        .bottomShadow1 {
+            top: 150px;
+            left: 0;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 15px 30px 0;
+            border-color: transparent black transparent transparent;
+            opacity: .5;
+        }
+
+        .bottomShadow4 {
+            top: 150px;
+            left: 15px;
+            position: absolute;
+            width: calc(100% - 15px);
+            height: 30px;
+            background-color: black;
+            opacity: .5;
+        }
+
+        .bottomShadow5 {
+            top: 150px;
+            left: 100%;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 0 0 15px;
+            border-color: transparent transparent transparent #000000;
+            opacity: .5;
+        }
+
+        .bottomShadow6 {
+            top: 180px;
+            left: 25px;
+            position: absolute;
+            width: calc(100% - 10px);
+            height: 20px;
+            background-color: black;
+            opacity: .5;
+        }
+
+        .bottomShadow7 {
+            top: 180px;
+            left: calc(100% + 15px);
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 0 0 10px;
+            border-color: transparent transparent transparent #000000;
+            opacity: .5;
+        }
+
+        .bottomShadow8 {
+            top: 200px;
+            left: 30px;
+            position: absolute;
+            width: calc(100% - 5px);
+            height: 10px;
+            background-color: black;
+            opacity: .5;
+        }
+
+        .bottomShadow11 {
+            top: 150px;
+            left: 0px;
+            position: absolute;
+            width: 50%;
+            height: 60px;
+            background-color: black;
+            opacity: .5;
+        }
+
+        .bottomShadow9 {
+            top: 200px;
+            left: calc(100% + 25px);
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 0 5px;
+            border-color: transparent transparent transparent #000000;
+            opacity: .5;
+        }
+
+        .bottomShadow10 {
+            top: 150px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 60px 0 0 30px;
+            border-color: transparent transparent transparent #000000;
+            opacity: .5;
+        }
+
+        .bottomShadow2 {
+            top: 200px;
+            left: 25px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 5px 10px 0;
+            border-color: transparent black transparent transparent;
+            opacity: .5;
+        }
+
+        .bottomShadow3 {
+            top: 180px;
+            left: 15px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 20px 0;
+            border-color: transparent black transparent transparent;
+            opacity: .5;
+        }
+
+        .clickShadow1 {
+
+            background-color: black;
+            position: absolute;
+            top: 0;
+            height: 25px;
+            width: 100%;
+            opacity: .5;
+        }
+
+        .clickShadow2 {
+
+            background-color: black;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            height: 125px;
+            width: 25px;
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navTitle"></div>
+        <div class="navKey">
+            <div class="hoverShadow">
+                <div class="hoverShadow1"></div>
+                <div class="hoverShadow2"></div>
+            </div>
+            <div class="hoverbottomshadow">
+                <div class="bottomShadow2"></div>
+                <div class="bottomShadow8"></div>
+                <div class="bottomShadow9"></div>
+            </div>
+            <div class="clickbottomshadow">
+                <div class="bottomShadow3"></div>
+                <div class="bottomShadow6"></div>
+                <div class="bottomShadow7"></div>
+            </div>
+            <div class="bottomShadow1"></div>
+            <div class="bottomShadow4"></div>
+            <div class="bottomShadow5"></div>
+
+            <div class="clickShadow">
+                <div class="clickShadow1"></div>
+                <div class="clickShadow2"></div>
+            </div>
+        </div>
+        <div class="navKey">
+            <div class="hoverShadow">
+                <div class="hoverShadow1"></div>
+                <div class="hoverShadow2"></div>
+            </div>
+            <div class="hoverbottomshadow">
+                <div class="bottomShadow2"></div>
+                <div class="bottomShadow8"></div>
+                <div class="bottomShadow9"></div>
+            </div>
+            <div class="clickbottomshadow">
+                <div class="bottomShadow3"></div>
+                <div class="bottomShadow6"></div>
+                <div class="bottomShadow7"></div>
+            </div>
+            <div class="bottomShadow1"></div>
+            <div class="bottomShadow4"></div>
+            <div class="bottomShadow5"></div>
+            <div class="clickShadow">
+                <div class="clickShadow1"></div>
+                <div class="clickShadow2"></div>
+            </div>
+        </div>
+        <div class="navKey">
+            <div class="hoverShadow">
+                <div class="hoverShadow1"></div>
+                <div class="hoverShadow2"></div>
+            </div>
+            <div class="hoverbottomshadow">
+                <div class="bottomShadow2"></div>
+                <div class="bottomShadow8"></div>
+                <div class="bottomShadow9"></div>
+            </div>
+            <div class="clickbottomshadow">
+                <div class="bottomShadow3"></div>
+                <div class="bottomShadow6"></div>
+                <div class="bottomShadow7"></div>
+            </div>
+            <div class="bottomShadow1"></div>
+            <div class="bottomShadow4"></div>
+            <div class="bottomShadow5"></div>
+            <div class="clickShadow">
+                <div class="clickShadow1"></div>
+                <div class="clickShadow2"></div>
+            </div>
+        </div>
+        <div class="navKey">
+            <div class="hoverShadow">
+                <div class="hoverShadow1"></div>
+                <div class="hoverShadow2"></div>
+            </div>
+            <div class="hoverbottomshadow">
+                <div class="bottomShadow2"></div>
+                <div class="bottomShadow8"></div>
+                <div class="bottomShadow9"></div>
+            </div>
+            <div class="clickbottomshadow">
+                <div class="bottomShadow3"></div>
+                <div class="bottomShadow6"></div>
+                <div class="bottomShadow7"></div>
+            </div>
+            <div class="bottomShadow1"></div>
+            <div class="bottomShadow4"></div>
+            <div class="bottomShadow5"></div>
+            <div class="clickShadow">
+                <div class="clickShadow1"></div>
+                <div class="clickShadow2"></div>
+            </div>
+        </div>
+        <div class="bottomShadow10"></div>
+        <div class="bottomShadow11"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".navKey").hover(function () {
+                $(".hoverShadow", this).css("display", "block");
+                $(".hoverbottomshadow", this).css("display", "none");
+            }, function () {
+                $(".hoverShadow", this).css("display", "none");
+                $(".hoverbottomshadow", this).css("display", "block");
+
+            });
+
+            $(".navKey")
+                .mouseup(function () {
+                    $(".clickShadow", this).css("display", "none");
+                    $(".hoverShadow", this).css("display", "block");
+                    $(".clickbottomshadow", this).css("display", "block");
+                })
+                .mousedown(function () {
+                    $(".clickShadow", this).css("display", "block");
+                    $(".hoverShadow", this).css("display", "none");
+                    $(".clickbottomshadow", this).css("display", "none");
+                });
+        });
+    </script>
+</body>
+
+</html>
